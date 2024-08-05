@@ -1,0 +1,20 @@
+---
+
+services:
+  webtrees:
+    image: "docker.io/nathanvaughn/webtrees:latest"
+    environment:
+      PRETTY_URLS: "1"
+      BASE_URL: "http://localhost:8080"
+      DB_TYPE: "sqlite"
+      DB_NAME: "webtrees"
+      WT_NAME: "Admin"
+      WT_USER: "admin"
+      WT_PASS: "admin"
+      WT_EMAIL: "admin@example.com"
+      PUID: "1000"
+      PGID: "1000"
+    volumes:
+      - ${PWD}/webtrees_data:/var/www/webtrees/data/
+    ports:
+      - 8080:80
