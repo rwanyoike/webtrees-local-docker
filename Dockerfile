@@ -10,7 +10,6 @@ RUN set -ex \
     && curl -fL -o ${_assets} ${WEBTREES_REPO}/releases/download/${WEBTREES_VERSION}/webtrees-${WEBTREES_VERSION}.zip \
     && mkdir -p ${_target} \
     && unzip -d ${_target} ${_assets} \
-    && mv ${_target}/webtrees ${_target}/html \
     && rm ${_assets} \
     && apk del .build-deps
 
@@ -39,7 +38,7 @@ COPY config/fpm-pool.conf /etc/php83/php-fpm.d/www.conf
 COPY config/php.ini /etc/php83/conf.d/custom.ini
 COPY config/supervisord.conf /etc/supervisord.conf
 
-WORKDIR /var/www/html
+WORKDIR /var/www/webtrees
 
 EXPOSE 80
 
