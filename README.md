@@ -1,7 +1,11 @@
 # webtrees Local (Online genealogy)
 
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/rwanyoike/webtrees-local-docker/docker-image.yml?branch=main)
+](https://github.com/rwanyoike/webtrees-local-docker/actions/workflows/docker-image.yml?query=branch%3Amain)
 [![GitHub License](https://img.shields.io/github/license/rwanyoike/webtrees-local-docker)
 ](LICENSE.txt)
+[![Docker Image Version](https://img.shields.io/docker/v/rwanyoike/webtrees-local)](https://hub.docker.com/r/rwanyoike/webtrees-local)
+[![Docker Image Size](https://img.shields.io/docker/image-size/rwanyoike/webtrees-local)](https://hub.docker.com/r/rwanyoike/webtrees-local)
 
 > **This container is for local use only and not suitable for production environments.**
 
