@@ -1,7 +1,7 @@
 FROM docker.io/library/alpine:3.20
 
 ARG WEBTREES_REPO=https://github.com/fisharebest/webtrees
-ARG WEBTREES_VERSION=2.1.20
+ARG WEBTREES_VERSION=2.2.1
 
 RUN set -ex \
     && apk add --no-cache -t .build-deps curl \
@@ -13,7 +13,7 @@ RUN set -ex \
     && rm ${_assets} \
     && apk del .build-deps
 
-# Ref: https://github.com/fisharebest/webtrees/blob/2.1/app/Services/ServerCheckService.php
+# Ref: https://github.com/fisharebest/webtrees/blob/2.2.1/app/Services/ServerCheckService.php
 RUN set -ex \
     && apk add --no-cache \
         nginx \
